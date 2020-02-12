@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<!-- <link rel="shortcut icon" href="/img/weather.png" type="image/x-icon">
+	<link rel="stylesheet" href="/css/styles.css" /> -->
+	<title>Weather</title>
+	<style>
+		fieldset{
+			padding: 5%;
+			text-align: center;
+		}
+		input {
+			width: 70%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<fieldset>
+			<form action="/" method="post">
+				<input name="city" type="text" class="ghost-input" placeholder="Enter the name of a place" required>
+				<input type="submit" class="ghost-button" value="Get Weather">
+			</form>
+			<% if(weather !== null){ %>
+			<p><%= weather %></p>
+			<% } %>
+
+			<% if(error !== null){ %>
+			<p><%= error %></p>
+			<% } %>
+		</fieldset>
+	</div>
+</body>
+
+</html>
